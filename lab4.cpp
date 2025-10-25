@@ -14,17 +14,17 @@ int main()
     }
     int temp0 = massiv[0];
     int temp3 = massiv[3];
-    while (temp0 > 0) {
-        int mod = abs(temp0);
-        int digit = temp0 % 10;
+    int mod0 = abs(temp0);
+    while (mod0 > 0) {
+        int digit = mod0 % 10;
         if (digit < mn1) {
             mn1 = digit;
         }
         temp0 /= 10;
     }
+    int mod3 = abs(temp3);
     while (temp3 > 0) {
-        int mod = abs(temp3);
-        int digit = temp3 % 10;
+        int digit = mod3 % 10;
         if (digit < mn2) {
             mn2 = digit;
         }
@@ -48,11 +48,7 @@ int main()
     int massiv2[3][4];
     for (int x = 0; x < 3; x++) {
         for (int y = 0; y < 4; y++) { 
-            std::cin >> massiv2[x][y];
-            if (massiv2[x][y] < 0) {
-                std::cout << "В матрице присутствует отрицательное число\n";
-                return 0;
-            }
+            std::cin >> massiv2[x][y]}
         }
     }
     int minsum = INT_MAX;
@@ -81,6 +77,7 @@ int main()
 
 
 }
+
 
 
 
