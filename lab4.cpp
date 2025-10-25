@@ -1,5 +1,5 @@
 ﻿
-
+#include <cmath>
 #include <iostream>
 
 int main()
@@ -15,6 +15,7 @@ int main()
     int temp0 = massiv[0];
     int temp3 = massiv[3];
     while (temp0 > 0) {
+        int mod = abs(temp0);
         int digit = temp0 % 10;
         if (digit < mn1) {
             mn1 = digit;
@@ -22,6 +23,7 @@ int main()
         temp0 /= 10;
     }
     while (temp3 > 0) {
+        int mod = abs(temp3);
         int digit = temp3 % 10;
         if (digit < mn2) {
             mn2 = digit;
@@ -59,7 +61,7 @@ int main()
         int sum = 0;
         for (int y = 0; y < 4; y++) {
             std::cout << massiv2[x][y] << " ";
-            sum += massiv2[x][y];
+            sum += abs(massiv2[x][y]);
         }
         if (sum < minsum) {
             minsum = sum;
@@ -79,6 +81,7 @@ int main()
 
 
 }
+
 
 
 
